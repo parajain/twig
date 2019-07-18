@@ -27,11 +27,18 @@
 			<artifactId>compiler</artifactId>
 			<version>0.8.18</version>
 		</dependency>
+		<!--- git says this has security issues
 		<dependency>
 			<groupId>com.github.jknack</groupId>
 			<artifactId>handlebars</artifactId>
 			<version>3.0.0</version>
 		</dependency>
+                --->
+		<dependency>
+                      <groupId>com.fasterxml.jackson.core</groupId>
+                       <artifactId>jackson-databind</artifactId>
+                     <version>[2.9.9.1,)</version>
+                </dependency>
 		<dependency>
 			<groupId>com.fasterxml.jackson.core</groupId>
 			<artifactId>jackson-databind</artifactId>
