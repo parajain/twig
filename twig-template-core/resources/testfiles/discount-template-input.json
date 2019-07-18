@@ -1,0 +1,14 @@
+  {
+  	"templateID": "test-discounts_template",
+  	"templateParameters": {
+  		"test":"2.12",
+  		"discounts": [{
+  			"type": "discount type 1",
+  			"value": "5"
+  		}, {
+  			"type": "discount type 2",
+  			"value": "25 %"
+  		}],
+  		"payment": "500$"
+  	}
+  }

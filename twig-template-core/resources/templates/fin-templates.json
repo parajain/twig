@@ -1,0 +1,890 @@
+{
+  "filename" : "fin-templates.json",
+  "description" : "Templates for nlq.",
+  "allMappings": [
+  {
+    "templateID": "public_metric_template",
+    "description": "",
+    "footNoteId":[""],
+    "templateStrings":["{{#if no-data}}I looked for{{else}}Showing{{/if}} {{metric-name}} of {{company-name}}{{#if time-phrase}} {{time-phrase}}{{/if}}{{#if no-data}} but unfortunately, I do not have any data to answer this question{{/if}}."],
+    "templateParameters": [
+      {
+        "name": "company-name",
+        "type":"single-value",
+         "required": true,
+        "default_value": ""
+      },
+      {
+        "name": "metric-name",
+        "type":"single-value",
+        "required": true,
+        "default_value": ""
+      },
+      {
+        "name": "time-phrase",
+        "type":"single-value",
+        "required": false,
+        "default_value": ""
+      },
+      {
+        "name": "no-data",
+        "type":"single-value",
+        "required": false,
+        "default_value": ""
+      }
+    ],
+    "headTemplates":[""],
+    "headTemplateParameters": [
+    ],
+    "footTemplates":[],
+    "footTemplateParameters":[]
+  },
+    {
+    "templateID": "bank_metric_template",
+    "description": "",
+    "footNoteId":[""],
+    "templateStrings":["{{#if no-data}}I looked for{{else}}Showing{{/if}} {{eid}} of {{bank-name}}{{#if time-phrase}} {{time-phrase}}{{/if}}{{#if no-data}} but unfortunately, I do not have any data to answer this question{{/if}}."],
+    "templateParameters": [
+      {
+        "name": "bank-name",
+        "type":"single-value",
+         "required": true,
+        "default_value": ""
+      },
+      {
+        "name": "eid",
+        "type":"single-value",
+        "required": true,
+        "default_value": ""
+      },
+      {
+        "name": "time-phrase",
+        "type":"single-value",
+        "required": false,
+        "default_value": ""
+      },
+      {
+        "name": "no-data",
+        "type":"single-value",
+        "required": false,
+        "default_value": ""
+      }
+    ],
+    "headTemplates":[""],
+    "headTemplateParameters": [
+    ],
+    "footTemplates":[],
+    "footTemplateParameters":[]
+  },
+      {
+    "templateID": "insider_history_template",
+    "description": "",
+    "footNoteId":[""],
+    "templateStrings":["{{#if no-data}}I looked for{{else}}{{#if insider-name}}Here is {{insider-name}}'s{{else}} Showing{{/if}}{{/if}}{{#if insider-history}} {{insider-history}}{{else}} insider history{{/if}}{{#if company-name}} in {{company-name}}{{/if}}{{#if title}} for title {{title}}{{/if}}{{#if position}} for position {{position}}{{/if}}{{#if time-phrase}} {{time-phrase}}{{/if}}{{#if no-data}} but unfortunately, I do not have any data to answer this question{{/if}}."],
+    "templateParameters": [
+      {
+        "name": "insider-name",
+        "type":"single-value",
+         "required": false,
+        "default_value": ""
+      },
+            {
+        "name": "insider-history",
+        "type":"single-value",
+         "required": false,
+        "default_value": ""
+      },
+      {
+        "name": "company-name",
+        "type":"single-value",
+        "required": false,
+        "default_value": ""
+      },
+      {
+        "name": "position",
+        "type":"single-value",
+        "required": false,
+        "default_value": ""
+      },
+      {
+        "name": "title",
+        "type":"single-value",
+        "required": false,
+        "default_value": ""
+      },
+      {
+        "name": "time-phrase",
+        "type":"single-value",
+        "required": false,
+        "default_value": ""
+      },
+      {
+        "name": "no-data",
+        "type":"single-value",
+        "required": false,
+        "default_value": ""
+      }
+    ],
+    "headTemplates":[""],
+    "headTemplateParameters": [
+    ],
+    "footTemplates":[],
+    "footTemplateParameters":[]
+  },
+  {
+    "templateID": "insider_history_template_with_explaination",
+    "description": "",
+    "footNoteId":[""],
+    "templateStrings":["As per my knowledge, {{insider-name}} has never been {{#if title}}{{title}}{{else}}{{#if position}}{{position}}{{else}}insider{{/if}}{{/if}} at {{company-name}}."],
+    "templateParameters": [
+      {
+        "name": "insider-name",
+        "type":"single-value",
+         "required": true,
+        "default_value": ""
+      },
+      {
+        "name": "company-name",
+        "type":"single-value",
+        "required": true,
+        "default_value": ""
+      },
+      {
+        "name": "position",
+        "type":"single-value",
+        "required": false,
+        "default_value": ""
+      },
+      {
+        "name": "title",
+        "type":"single-value",
+        "required": false,
+        "default_value": ""
+      }
+    ],
+    "headTemplates":[""],
+    "headTemplateParameters": [
+    ],
+    "footTemplates":[],
+    "footTemplateParameters":[]
+  },
+        {
+    "templateID": "common_insider_history_template",
+    "description": "",
+    "footNoteId":[""],
+    "templateStrings":["{{#if no-data}}I looked for{{else}}Here{{#if insider-name}}is {{insider-name}}'s{{else}} are{{/if}}{{/if}} common insider{{#if company-name}} at {{company-name}}{{#if position}} for title {{position}}{{/if}}{{/if}}{{#if time-phrase}} {{time-phrase}}{{/if}}{{#if no-data}} but unfortunately, I do not have any data to answer this question{{/if}}."],
+    "templateParameters": [
+      {
+        "name": "insider-name",
+        "type":"single-value",
+         "required": false,
+        "default_value": ""
+      },
+      {
+        "name": "company-name",
+        "type":"single-value",
+        "required": false,
+        "default_value": ""
+      },
+      {
+        "name": "time-phrase",
+        "type":"single-value",
+        "required": false,
+        "default_value": ""
+      },
+      {
+        "name": "no-data",
+        "type":"single-value",
+        "required": false,
+        "default_value": ""
+      }
+    ],
+    "headTemplates":[""],
+    "headTemplateParameters": [
+    ],
+    "footTemplates":[],
+    "footTemplateParameters":[]
+  },
+          {
+    "templateID": "industry_company_template",
+    "description": "",
+    "footNoteId":[""],
+    "templateStrings":["{{#if no-data}}I looked for{{else}}Here are{{/if}} the companies in {{industry}} industry."],
+        "templateParameters": [
+      {
+        "name": "industry",
+        "type":"single-value",
+         "required": true,
+        "default_value": ""
+      }
+    ],
+    "headTemplates":[""],
+    "headTemplateParameters": [
+    ],
+    "footTemplates":[],
+    "footTemplateParameters":[]
+  },
+  {
+    "templateID": "company-industry-template",
+    "description": "",
+    "footNoteId":[""],
+    "templateStrings":["{{#if no-data}}I looked for{{else}}Here are{{/if}} the industries for {{company}}."],
+        "templateParameters": [
+      {
+        "name": "company",
+        "type":"single-value",
+         "required": true,
+        "default_value": ""
+      }
+    ],
+    "headTemplates":[""],
+    "headTemplateParameters": [
+    ],
+    "footTemplates":[],
+    "footTemplateParameters":[]
+  },
+  {
+    "templateID": "nlq-partial-answer",
+    "description": "",
+    "footNoteId":[""],
+    "templateStrings":["I did not understand what is meant by {{#missed-phrases}}'{{phrase}}'{{#if conjunction}} {{conjunction}} {{/if}}{{/missed-phrases}}."],
+    "templateParameters": [
+      {
+        "name":"missed-phrases",
+        "type":"multi-map",
+        "required":true,
+        "default_value":""
+      }
+    ],
+    "headTemplates":[""],
+    "headTemplateParameters": [
+    ],
+     "footTemplates":[""],
+    "footTemplateParameters": []
+  },
+  {
+    "templateID": "nlq-disambiguate-person",
+    "description": "",
+    "footNoteId":[""],
+    "templateStrings":["{\"headString\":\"By '{{ambigiousString}}' do you mean:\",\"list\":[ {{#clarification}}\"{{person}}{{#if position}}, {{position}}{{/if}}{{#if company}} at {{company}}{{/if}}\"{{#if comma}}{{comma}}{{/if}}{{/clarification}}]}"],
+    "templateParameters": [
+      {
+        "name":"clarification",
+        "type":"multi-map",
+        "required":true,
+        "default_value":""
+      },
+      {
+        "name":"ambigiousString",
+        "type":"single-value",
+        "required":true,
+        "default_value":""
+      }
+    ],
+    "headTemplates":[""],
+    "headTemplateParameters": [
+    ],
+     "footTemplates":[""],
+    "footTemplateParameters": []
+  },
+    {
+    "templateID": "nlq-disambiguate-general",
+    "description": "",
+    "footNoteId":[""],
+    "templateStrings":["{\"headString\":\"By '{{ambigiousString}}' do you mean:\",\"list\":[ {{#clarification}}\"{{type}}{{#if value}} - {{value}}{{/if}}\"{{#if comma}}{{comma}}{{/if}}{{/clarification}}]}"],
+    "templateParameters": [
+      {
+        "name":"clarification",
+        "type":"multi-map",
+        "required":true,
+        "default_value":""
+      },
+      {
+        "name":"ambigiousString",
+        "type":"single-value",
+        "required":true,
+        "default_value":""
+      }
+    ],
+    "headTemplates":[""],
+    "headTemplateParameters": [
+    ],
+     "footTemplates":[""],
+    "footTemplateParameters": []
+  },
+    {
+    "templateID": "nlq-disambiguate-metric",
+    "description": "",
+    "footNoteId":[""],
+    "templateStrings":["{\"headString\":\"By '{{ambigiousString}}' do you mean:\",\"list\":[ {{#clarification}}\"{{#if metric-eid}}{{metric-eid}},{{/if}}{{#if metric-name}}{{metric-name}}{{/if}}\"{{#if comma}}{{comma}}{{/if}}{{/clarification}}]}"],
+    "templateParameters": [
+      {
+        "name":"clarification",
+        "type":"multi-map",
+        "required":true,
+        "default_value":""
+      },
+      {
+        "name":"ambigiousString",
+        "type":"single-value",
+        "required":true,
+        "default_value":""
+      }
+    ],
+    "headTemplates":[""],
+    "headTemplateParameters": [
+    ],
+     "footTemplates":[""],
+    "footTemplateParameters": []
+  },
+  {
+    "templateID": "nlq-conflicting-evidence",
+    "description": "",
+    "footNoteId":[""],
+    "templateStrings":["This is not a valid question.{{#conflicting-evidence}} {{token}} {{element}}{{#if conjunction}} {{conjunction}}{{/if}}{{/conflicting-evidence}}."],
+    "templateParameters": [
+      {
+        "name":"conflicting-evidence",
+        "type":"multi-map",
+        "required":true,
+        "default_value":""
+      }
+    ],
+    "headTemplates":["This seems like invalid."],
+    "headTemplateParameters": [
+    ],
+     "footTemplates":[""],
+    "footTemplateParameters": []
+  },
+    {
+    "templateID": "nlq-complex-intent",
+    "description": "",
+    "footNoteId":[""],
+    "templateStrings":["{{#if complex-intent}}'{{complex-intent}}' is too complex for me to understand.{{/if}} I am still learning, please try in easy way."],
+    "templateParameters": [
+      {
+        "name":"complex-intent",
+        "type":"single-value",
+        "required":true,
+        "default_value":""
+      }
+    ],
+    "headTemplates":[""],
+    "headTemplateParameters": [
+    ],
+     "footTemplates":[""],
+    "footTemplateParameters": []
+  },
+  {
+    "templateID": "nlq-disambiguate-off",
+    "description": "",
+    "footNoteId":[""],
+    "templateStrings":["{{#clarification}}'{{ambigiousString}}' may mean {{values}}. {{/clarification}}"],
+    "templateParameters": [
+      {
+        "name":"clarification",
+        "type":"multi-map",
+        "required":true,
+        "default_value":""
+      },
+      {
+        "name":"ambigiousString",
+        "type":"single-value",
+        "required":true,
+        "default_value":""
+      }
+    ],
+    "headTemplates":[""],
+    "headTemplateParameters": [
+    ],
+     "footTemplates":[""],
+    "footTemplateParameters": []
+  },
+    {
+    "templateID": "nlq-oos-intent",
+    "description": "",
+    "footNoteId":[""],
+    "templateStrings":["I am still gathering knowledge to answer questions on- {{#missed-phrases}}{{phrase}}{{#if conjunction}} {{conjunction}} {{/if}}{{/missed-phrases}}"],
+    "templateParameters": [
+      {
+        "name":"missed-phrases",
+        "type":"multi-map",
+        "required":true,
+        "default_value":""
+      }
+    ],
+    "headTemplates":[""],
+    "headTemplateParameters": [
+    ],
+     "footTemplates":[""],
+    "footTemplateParameters": []
+  },
+      {
+    "templateID": "nlq-relaxed-condition",
+    "description": "",
+    "footNoteId":[""],
+    "templateStrings":["I did not find any results for '{{OrgToken}}', hence tried for '{{RelaxedToken}}'."],
+    "templateParameters": [
+      {
+        "name":"OrgToken",
+        "type":"single-value",
+        "required":true,
+        "default_value":""
+      },
+      {
+        "name":"RelaxedToken",
+        "type":"single-value",
+        "required":true,
+        "default_value":""
+      }
+    ],
+    "headTemplates":[""],
+    "headTemplateParameters": [
+    ],
+     "footTemplates":[""],
+    "footTemplateParameters": []
+  },
+   {
+    "templateID": "de_public_metric_template",
+    "description": "",
+    "footNoteId":[""],
+    "templateStrings":["{{#if no-data}}Ich suchte nach{{else}}zeigt{{/if}} {{metric-name}} von {{company-name}}{{#if time-phrase}} {{time-phrase}}{{/if}}{{#if no-data}} aber leider habe, Ich habe keine Daten, um diese Frage zu beantworten{{/if}}."],
+    "templateParameters": [
+      {
+        "name": "company-name",
+        "type":"single-value",
+         "required": true,
+        "default_value": ""
+      },
+      {
+        "name": "metric-name",
+        "type":"single-value",
+        "required": true,
+        "default_value": ""
+      },
+      {
+        "name": "time-phrase",
+        "type":"single-value",
+        "required": false,
+        "default_value": ""
+      },
+      {
+        "name": "no-data",
+        "type":"single-value",
+        "required": false,
+        "default_value": ""
+      }
+    ],
+    "headTemplates":[""],
+    "headTemplateParameters": [
+    ],
+    "footTemplates":[],
+    "footTemplateParameters":[]
+  },
+    {
+    "templateID": "de_bank_metric_template",
+    "description": "",
+    "footNoteId":[""],
+    "templateStrings":["{{#if no-data}}Ich suchte nach{{else}}zeigt{{/if}} {{eid}} von {{bank-name}}{{#if time-phrase}} {{time-phrase}}{{/if}}{{#if no-data}} aber leider habe, Ich habe keine Daten, um diese Frage zu beantworten{{/if}}."],
+    "templateParameters": [
+      {
+        "name": "bank-name",
+        "type":"single-value",
+         "required": true,
+        "default_value": ""
+      },
+      {
+        "name": "eid",
+        "type":"single-value",
+        "required": true,
+        "default_value": ""
+      },
+      {
+        "name": "time-phrase",
+        "type":"single-value",
+        "required": false,
+        "default_value": ""
+      },
+      {
+        "name": "no-data",
+        "type":"single-value",
+        "required": false,
+        "default_value": ""
+      }
+    ],
+    "headTemplates":[""],
+    "headTemplateParameters": [
+    ],
+    "footTemplates":[],
+    "footTemplateParameters":[]
+  },
+      {
+    "templateID": "de_insider_history_template",
+    "description": "",
+    "footNoteId":[""],
+    "templateStrings":["{{#if no-data}}Ich suchte nach{{else}}{{#if insider-name}}Hier ist {{insider-name}}'s{{else}} zeigt{{/if}}{{/if}}{{#if insider-history}} {{insider-history}}{{else}} Insidergeschichte {{/if}}{{#if company-name}} in {{company-name}}{{/if}}{{#if title}} für Titel {{title}}{{/if}}{{#if position}} für die Position {{position}}{{/if}}{{#if time-phrase}} {{time-phrase}}{{/if}}{{#if no-data}} aber leider habe, Ich habe keine Daten, um diese Frage zu beantworten{{/if}}."],
+    "templateParameters": [
+      {
+        "name": "insider-name",
+        "type":"single-value",
+         "required": false,
+        "default_value": ""
+      },
+            {
+        "name": "insider-history",
+        "type":"single-value",
+         "required": false,
+        "default_value": ""
+      },
+      {
+        "name": "company-name",
+        "type":"single-value",
+        "required": false,
+        "default_value": ""
+      },
+      {
+        "name": "position",
+        "type":"single-value",
+        "required": false,
+        "default_value": ""
+      },
+      {
+        "name": "title",
+        "type":"single-value",
+        "required": false,
+        "default_value": ""
+      },
+      {
+        "name": "time-phrase",
+        "type":"single-value",
+        "required": false,
+        "default_value": ""
+      },
+      {
+        "name": "no-data",
+        "type":"single-value",
+        "required": false,
+        "default_value": ""
+      }
+    ],
+    "headTemplates":[""],
+    "headTemplateParameters": [
+    ],
+    "footTemplates":[],
+    "footTemplateParameters":[]
+  },
+  {
+    "templateID": "de_insider_history_template_with_explaination",
+    "description": "",
+    "footNoteId":[""],
+    "templateStrings":["Nach meinem Wissen, {{insider-name}} war noch nie {{#if title}}{{title}}{{else}}{{#if position}}{{position}}{{else}}Insider{{/if}}{{/if}} bei {{company-name}}."],
+    "templateParameters": [
+      {
+        "name": "insider-name",
+        "type":"single-value",
+         "required": true,
+        "default_value": ""
+      },
+      {
+        "name": "company-name",
+        "type":"single-value",
+        "required": true,
+        "default_value": ""
+      },
+      {
+        "name": "position",
+        "type":"single-value",
+        "required": false,
+        "default_value": ""
+      },
+      {
+        "name": "title",
+        "type":"single-value",
+        "required": false,
+        "default_value": ""
+      }
+    ],
+    "headTemplates":[""],
+    "headTemplateParameters": [
+    ],
+    "footTemplates":[],
+    "footTemplateParameters":[]
+  },
+        {
+    "templateID": "de_common_insider_history_template",
+    "description": "",
+    "footNoteId":[""],
+    "templateStrings":["{{#if no-data}}Ich suchte nach{{else}}Hier{{#if insider-name}}ist {{insider-name}}'s{{else}} sing{{/if}}{{/if}} gemeinsame Insider{{#if company-name}} bei {{company-name}}{{#if position}} für Titel {{position}}{{/if}}{{/if}}{{#if time-phrase}} {{time-phrase}}{{/if}}{{#if no-data}} aber leider habe, Ich habe keine Daten, um diese Frage zu beantworten{{/if}}."],
+    "templateParameters": [
+      {
+        "name": "insider-name",
+        "type":"single-value",
+         "required": false,
+        "default_value": ""
+      },
+      {
+        "name": "company-name",
+        "type":"single-value",
+        "required": false,
+        "default_value": ""
+      },
+      {
+        "name": "time-phrase",
+        "type":"single-value",
+        "required": false,
+        "default_value": ""
+      },
+      {
+        "name": "no-data",
+        "type":"single-value",
+        "required": false,
+        "default_value": ""
+      }
+    ],
+    "headTemplates":[""],
+    "headTemplateParameters": [
+    ],
+    "footTemplates":[],
+    "footTemplateParameters":[]
+  },
+          {
+    "templateID": "de_industry_company_template",
+    "description": "",
+    "footNoteId":[""],
+    "templateStrings":["{{#if no-data}}Ich suchte nach{{else}}Hier sind{{/if}} die Firmen in {{industry}} Industrie."],
+        "templateParameters": [
+      {
+        "name": "industry",
+        "type":"single-value",
+         "required": true,
+        "default_value": ""
+      }
+    ],
+    "headTemplates":[""],
+    "headTemplateParameters": [
+    ],
+    "footTemplates":[],
+    "footTemplateParameters":[]
+  },
+  {
+    "templateID": "de_company-industry-template",
+    "description": "",
+    "footNoteId":[""],
+    "templateStrings":["{{#if no-data}}Ich suchte nach{{else}}Hier sing{{/if}} Branchen für {{company}}."],
+        "templateParameters": [
+      {
+        "name": "company",
+        "type":"single-value",
+         "required": true,
+        "default_value": ""
+      }
+    ],
+    "headTemplates":[""],
+    "headTemplateParameters": [
+    ],
+    "footTemplates":[],
+    "footTemplateParameters":[]
+  },
+  {
+    "templateID": "de_nlq-partial-answer",
+    "description": "",
+    "footNoteId":[""],
+    "templateStrings":["Ich verstand nicht, was ist Mittel von {{#missed-phrases}}'{{phrase}}'{{#if conjunction}} {{conjunction}} {{/if}}{{/missed-phrases}}."],
+    "templateParameters": [
+      {
+        "name":"missed-phrases",
+        "type":"multi-map",
+        "required":true,
+        "default_value":""
+      }
+    ],
+    "headTemplates":[""],
+    "headTemplateParameters": [
+    ],
+     "footTemplates":[""],
+    "footTemplateParameters": []
+  },
+  {
+    "templateID": "de_nlq-disambiguate-person",
+    "description": "",
+    "footNoteId":[""],
+    "templateStrings":["{\"headString\":\"Mit '{{ambigiousString}}' meinten sie:\",\"list\":[ {{#clarification}}\"{{person}}{{#if position}}, {{position}}{{/if}}{{#if company}} bei {{company}}{{/if}}\"{{#if comma}}{{comma}}{{/if}}{{/clarification}}]}"],
+    "templateParameters": [
+      {
+        "name":"clarification",
+        "type":"multi-map",
+        "required":true,
+        "default_value":""
+      },
+      {
+        "name":"ambigiousString",
+        "type":"single-value",
+        "required":true,
+        "default_value":""
+      }
+    ],
+    "headTemplates":[""],
+    "headTemplateParameters": [
+    ],
+     "footTemplates":[""],
+    "footTemplateParameters": []
+  },
+    {
+    "templateID": "de_nlq-disambiguate-general",
+    "description": "",
+    "footNoteId":[""],
+    "templateStrings":["{\"headString\":\"Mit '{{ambigiousString}}' meinten sie:\",\"list\":[ {{#clarification}}\"{{type}}{{#if value}} - {{value}}{{/if}}\"{{#if comma}}{{comma}}{{/if}}{{/clarification}}]}"],
+    "templateParameters": [
+      {
+        "name":"clarification",
+        "type":"multi-map",
+        "required":true,
+        "default_value":""
+      },
+      {
+        "name":"ambigiousString",
+        "type":"single-value",
+        "required":true,
+        "default_value":""
+      }
+    ],
+    "headTemplates":[""],
+    "headTemplateParameters": [
+    ],
+     "footTemplates":[""],
+    "footTemplateParameters": []
+  },
+    {
+    "templateID": "de_nlq-disambiguate-metric",
+    "description": "",
+    "footNoteId":[""],
+    "templateStrings":["{\"headString\":\"Mit '{{ambigiousString}}' meinten Sie:\",\"list\":[ {{#clarification}}\"{{#if metric-eid}}{{metric-eid}},{{/if}}{{#if metric-name}}{{metric-name}}{{/if}}\"{{#if comma}}{{comma}}{{/if}}{{/clarification}}]}"],
+    "templateParameters": [
+      {
+        "name":"clarification",
+        "type":"multi-map",
+        "required":true,
+        "default_value":""
+      },
+      {
+        "name":"ambigiousString",
+        "type":"single-value",
+        "required":true,
+        "default_value":""
+      }
+    ],
+    "headTemplates":[""],
+    "headTemplateParameters": [
+    ],
+     "footTemplates":[""],
+    "footTemplateParameters": []
+  },
+  {
+    "templateID": "de_nlq-conflicting-evidence",
+    "description": "",
+    "footNoteId":[""],
+    "templateStrings":["Dies ist keine gültige Frage.{{#conflicting-evidence}} {{token}} {{element}}{{#if conjunction}} {{conjunction}}{{/if}}{{/conflicting-evidence}}."],
+    "templateParameters": [
+      {
+        "name":"conflicting-evidence",
+        "type":"multi-map",
+        "required":true,
+        "default_value":""
+      }
+    ],
+    "headTemplates":["This seems like invalid."],
+    "headTemplateParameters": [
+    ],
+     "footTemplates":[""],
+    "footTemplateParameters": []
+  },
+    {
+    "templateID": "de_nlq-complex-intent",
+    "description": "",
+    "footNoteId":[""],
+    "templateStrings":["{{#if complex-intent}}'{{complex-intent}}' ist zu komplex für mich zu verstehen.{{/if}} Ich lerne immer noch, bitte versuchen Sie es in einfacher Weise."],
+    "templateParameters": [
+      {
+        "name":"complex-intent",
+        "type":"single-value",
+        "required":true,
+        "default_value":""
+      }
+    ],
+    "headTemplates":[""],
+    "headTemplateParameters": [
+    ],
+     "footTemplates":[""],
+    "footTemplateParameters": []
+  },
+  {
+    "templateID": "de_nlq-disambiguate-off",
+    "description": "",
+    "footNoteId":[""],
+    "templateStrings":["{{#clarification}}'{{ambigiousString}}' kann bedeuten {{values}}. {{/clarification}}"],
+    "templateParameters": [
+      {
+        "name":"clarification",
+        "type":"multi-map",
+        "required":true,
+        "default_value":""
+      },
+      {
+        "name":"ambigiousString",
+        "type":"single-value",
+        "required":true,
+        "default_value":""
+      }
+    ],
+    "headTemplates":[""],
+    "headTemplateParameters": [
+    ],
+     "footTemplates":[""],
+    "footTemplateParameters": []
+  },
+    {
+    "templateID": "de_nlq-oos-intent",
+    "description": "",
+    "footNoteId":[""],
+    "templateStrings":["Ich bin immer noch sammeln Wissen, um Fragen zu beantworten - {{#missed-phrases}}{{phrase}}{{#if conjunction}} {{conjunction}} {{/if}}{{/missed-phrases}}"],
+    "templateParameters": [
+      {
+        "name":"missed-phrases",
+        "type":"multi-map",
+        "required":true,
+        "default_value":""
+      }
+    ],
+    "headTemplates":[""],
+    "headTemplateParameters": [
+    ],
+     "footTemplates":[""],
+    "footTemplateParameters": []
+  },
+      {
+    "templateID": "de_nlq-relaxed-condition",
+    "description": "",
+    "footNoteId":[""],
+    "templateStrings":["Ich habe keine Ergebnisse für '{{OrgToken}}' gefunden, daher versuchte für '{{RelaxedToken}}'."],
+    "templateParameters": [
+      {
+        "name":"OrgToken",
+        "type":"single-value",
+        "required":true,
+        "default_value":""
+      },
+      {
+        "name":"RelaxedToken",
+        "type":"single-value",
+        "required":true,
+        "default_value":""
+      }
+    ],
+    "headTemplates":[""],
+    "headTemplateParameters": [
+    ],
+     "footTemplates":[""],
+    "footTemplateParameters": []
+  }
+]
+}

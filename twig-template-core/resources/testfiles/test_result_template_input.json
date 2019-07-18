@@ -1,0 +1,11 @@
+{
+"templateID":"test_result_template",
+"templateParameters":{
+	"entity":"Citi bank",
+	"metric":"revenue",
+	"time-phrase":"last six month"
+},
+"headTemplateParameters":{
+	"entity":"Citi bank"
+}
+}
